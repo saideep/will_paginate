@@ -23,16 +23,17 @@ module WillPaginate
     # default options that can be overridden on the global level
     @@pagination_options = {
       :class          => 'pagination',
-      :previous_label => '&laquo; Previous',
-      :next_label     => 'Next &raquo;',
-      :inner_window   => 4, # links around the current page
+      :previous_label => '', # &laquo; Previous
+      :next_label     => 'More', #  &raquo;
+      :inner_window   => 2, # links around the current page
       :outer_window   => 1, # links around beginning and end
       :separator      => ' ', # single space is friendly to spiders and non-graphic browsers
       :param_name     => :page,
       :params         => nil,
       :renderer       => 'WillPaginate::LinkRenderer',
-      :page_links     => true,
-      :container      => true
+      :page_links     => false,
+      :container      => true,
+      :id             => true
     }
     mattr_reader :pagination_options
 
