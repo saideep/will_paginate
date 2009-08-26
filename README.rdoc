@@ -54,7 +54,10 @@ with another "more" link to it
   </div>
 
 == Note
-  If :more => true is not supplied in the options, then it will give you the classic view of the pagination with page number and its links.
+
+  If [\* :more => true *] is [\* NOT *] supplied in the options, then it will give you the classic view
+   of the pagination with page number and its links.
+
 ===  _search_results.html.erb (And the partial which renders the results )
 
   <% for category in @categories %>
@@ -63,7 +66,7 @@ with another "more" link to it
     <hr />
    <% end -%>
 
-  <%= will_paginate(@categories) %>
+  <%= will_paginate(@categories, :more => true) %>
 
 === One last step adding of the Javascript in your applications.js
 
@@ -113,7 +116,7 @@ records.  Don't forget to tell it which page you want, or it will complain!
 Read more on WillPaginate::Finder::ClassMethods.
 
 == ToDo
-   Guessing ;)
+   Test Features and ?
 
 == Note
   For reference about the will pagination and other related material please go to the Readme_old.txt file 
