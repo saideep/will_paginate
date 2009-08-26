@@ -7,6 +7,7 @@ In this I have made minor changes to the plugin to give you a "more" pagination 
 
 ... and then render the page links with a single view helper? Well, now you
 can.
+  <%= will_paginate(@posts) %>
 
 Some resources to get you started:
 
